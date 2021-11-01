@@ -1,37 +1,33 @@
---[[---------------------------------------------------------------------------
-DarkRP custom jobs
----------------------------------------------------------------------------
-This file contains your custom jobs.
-This file should also contain jobs from DarkRP that you edited.
-
-Note: If you want to edit a default DarkRP job, first disable it in darkrp_config/disabled_defaults.lua
-      Once you've done that, copy and paste the job to this file and edit it.
-
-The default jobs can be found here:
-https://github.com/FPtje/DarkRP/blob/master/gamemode/config/jobrelated.lua
-
-For examples and explanation please visit this wiki page:
-https://darkrp.miraheze.org/wiki/DarkRP:CustomJobFields
-
-Add your custom jobs under the following line:
----------------------------------------------------------------------------]]
-
-
-
---[[---------------------------------------------------------------------------
-Define which team joining players spawn into and what team you change to if demoted
----------------------------------------------------------------------------]]
-GAMEMODE.DefaultTeam = TEAM_CITIZEN
---[[---------------------------------------------------------------------------
-Define which teams belong to civil protection
-Civil protection can set warrants, make people wanted and do some other police related things
----------------------------------------------------------------------------]]
-GAMEMODE.CivilProtection = {
-    [TEAM_POLICE] = true,
-    [TEAM_CHIEF] = true,
-    [TEAM_MAYOR] = true,
-}
---[[---------------------------------------------------------------------------
-Jobs that are hitmen (enables the hitman menu)
----------------------------------------------------------------------------]]
-DarkRP.addHitmanTeam(TEAM_MOB)
+[[
+    Generated using: DarkRP | Job Generator
+    https://csite.io/tools/gmod-darkrp-job
+--]]
+TEAM_GANG = DarkRP.createJob("Gangster", {
+    color = Color(75, 75, 75, 255),
+    model = {
+        "models/player/Group03/Female_01.mdl",
+        "models/player/Group03/Female_02.mdl",
+        "models/player/Group03/Female_03.mdl",
+        "models/player/Group03/Female_04.mdl",
+        "models/player/Group03/Female_06.mdl",
+        "models/player/group03/male_01.mdl",
+        "models/player/Group03/Male_02.mdl",
+        "models/player/Group03/male_03.mdl",
+        "models/player/Group03/Male_04.mdl",
+        "models/player/Group03/Male_05.mdl",
+        "models/player/Group03/Male_06.mdl",
+        "models/player/Group03/Male_07.mdl",
+        "models/player/Group03/Male_08.mdl",
+        "models/player/Group03/Male_09.mdl"
+    },
+    description = [[The lowest person of crime. A gangster generally works for the Mobboss who runs the crime family. The Mob boss sets your agenda and you follow it or you might be punished.]],
+    weapons = {"weapon_ak472", "weapon_deagle2", "weapon_fiveseven2", "weapon_glock2", "weapon_m42", "weapon_hands"},
+    command = "gangster",
+    max = 3,
+    salary = 50,
+    admin = 0,
+    vote = false,
+    hasLicense = false,
+    candemote = true,
+    category = "Gangsters"
+})
